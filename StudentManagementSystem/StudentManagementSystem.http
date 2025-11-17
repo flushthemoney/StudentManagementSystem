@@ -1,0 +1,51 @@
+### Student Management System API Test Cases
+
+@baseUrl = https://localhost:7001/api
+@studentId = 1
+
+### Get all students
+GET {{baseUrl}}/students
+Accept: application/json
+
+###
+
+### Get student by ID
+GET {{baseUrl}}/students/{{studentId}}
+Accept: application/json
+
+###
+
+### Create a new student
+POST {{baseUrl}}/students
+Content-Type: application/json
+
+{
+  "firstName": "Alice",
+  "lastName": "Johnson",
+  "email": "alice.johnson@example.com",
+  "dateOfBirth": "2002-03-15",
+  "major": "Computer Engineering"
+}
+
+###
+
+### Update an existing student
+PUT {{baseUrl}}/students/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john.doe.updated@example.com",
+  "dateOfBirth": "2000-01-15",
+  "major": "Software Engineering"
+}
+
+###
+
+### Delete a student
+DELETE {{baseUrl}}/students/2
+Accept: application/json
+
+###
