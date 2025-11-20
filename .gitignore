@@ -1,0 +1,20 @@
+# Build outputs
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+
+# IDE directories
+.vs/
+.vscode/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+
+# Development settings (may contain secrets)
+appsettings.Development.json
